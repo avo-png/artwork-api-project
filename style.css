@@ -1,0 +1,58 @@
+body {
+	background-color: #9a7474;
+}
+
+.card-wrapper {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.art-image {
+	max-width: 100%;
+	max-height: 80vh;
+	height: auto;
+	width: auto;
+	display: block;
+	overflow-y: hidden;
+	object-fit: cover;
+	border: solid 2px;
+}
+
+button {
+	padding: 15px;
+	border-radius: 30px;
+	text-decoration: none;
+	border: none;
+	background-color: #3a2016;
+	color: #fff;
+}
+
+.categories {
+	max-width: 100%;
+	display: block;
+	width: 50vw;
+}
+
+@media (max-width: 1024px) {
+	.categories {
+		max-width: 50vh;
+	}
+
+	.art-image {
+		max-width: 50vh;
+		max-height: 30vh;
+	}
+}
+
+@media (max-width: 600px) {
+	.categories {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.art-image {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
