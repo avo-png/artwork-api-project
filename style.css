@@ -2,15 +2,20 @@ body {
 	background-color: #9a7474;
 }
 
+.box {
+	text-align: center;
+}
+
 .card-wrapper {
 	width: 100%;
 	padding: 20px;
 	box-sizing: border-box;
+	justify-items: center;
 }
 
 .art-image {
 	max-width: 100%;
-	max-height: 80vh;
+	max-height: 60vh;
 	height: auto;
 	width: auto;
 	display: block;
@@ -32,6 +37,10 @@ button {
 	max-width: 100%;
 	display: block;
 	width: 50vw;
+	border: solid 2px #000;
+	padding: 10px;
+	margin: 10px;
+	background-color: #b69022;
 }
 
 @media (max-width: 1024px) {
@@ -39,10 +48,10 @@ button {
 		max-width: 50vh;
 	}
 
-	.art-image {
+	/* .art-image {
 		max-width: 50vh;
 		max-height: 30vh;
-	}
+	} */
 }
 
 @media (max-width: 600px) {
