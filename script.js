@@ -7,7 +7,7 @@ async function fetchArtworks() {
 
 	try {
 		const response = await fetch(
-			"https://api.artic.edu/api/v1/artworks?fields=id,image_id,title,place_of_origin,short_description,artist_display"
+			"https://api.artic.edu/api/v1/artworks?fields=id,image_id,title,place_of_origin,short_description,artist_display&limit=60"
 		);
 
 		const data = await response.json();
@@ -19,15 +19,12 @@ async function fetchArtworks() {
 		const artwork =
 			artworksWithImages[Math.floor(Math.random() * artworksWithImages.length)];
 
-		// Safe image load + cache bust
-		imgElement.src = `https://www.artic.edu/iiif/2/${
-			artwork.image_id
-		}/full/843,/0/default.jpg?cb=${Date.now()}`;
+		imgElement.src = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`;
 
 		title.textContent = artwork.title || "N/A";
 		display.textContent = artwork.artist_display || "N/A";
 		origin.textContent = artwork.place_of_origin || "N/A";
-		description.textContent = artwork.short_description || "N/A";
+		description.textContent = artwork.description || "N/A";
 	} catch (error) {
 		console.error("Error fetching artworks:", error);
 	}
