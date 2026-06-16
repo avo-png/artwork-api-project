@@ -31,9 +31,20 @@
 					<p>Description: <span id="artworkDescription"></span></p>
 				</div>
 				<div class="button-container">
+					<div class="results-count">
+						<p>
+							No:
+							<span
+								id="no"
+								class="count"
+								>0</span
+							>
+						</p>
+					</div>
 					<button
 						class="vote-button"
 						type="button"
+						onclick="voteNo()"
 					>
 						<img
 							src="https://cdn-icons-png.flaticon.com/512/1633/1633636.png"
@@ -41,6 +52,7 @@
 						/>
 					</button>
 					<button
+						class="new-artwork-button"
 						onclick="fetchArtworks()"
 						type="button"
 					>
@@ -49,12 +61,23 @@
 					<button
 						class="vote-button"
 						type="button"
+						onclick="voteYes()"
 					>
 						<img
 							src="https://cdn-icons-png.flaticon.com/512/25/25297.png"
 							alt="Thumbs Up Button"
 						/>
 					</button>
+					<div class="results-count">
+						<p>
+							Yes:
+							<span
+								id="yes"
+								class="count"
+								>0</span
+							>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

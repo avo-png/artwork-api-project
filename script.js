@@ -7,7 +7,7 @@ async function fetchArtworks() {
 
 	try {
 		const response = await fetch(
-			"https://api.artic.edu/api/v1/artworks?fields=id,image_id,title,place_of_origin,short_description,artist_display&limit=60"
+			"https://api.artic.edu/api/v1/artworks?fields=id,image_id,title,place_of_origin,short_description,artist_display&limit=60",
 		);
 
 		const data = await response.json();
@@ -28,4 +28,16 @@ async function fetchArtworks() {
 	} catch (error) {
 		console.error("Error fetching artworks:", error);
 	}
+}
+
+let yesClicks = 0;
+function voteYes() {
+	document.getElementById("yes").innerHTML = yesClicks;
+	yesClicks += 1;
+}
+
+let noClicks = 0;
+function voteNo() {
+	noClicks += 1;
+	document.getElementById("no").innerHTML = noClicks;
 }
