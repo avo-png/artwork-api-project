@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -30,12 +30,32 @@
 					<p>Place of Origin: <span id="artworkOrigin"></span></p>
 					<p>Description: <span id="artworkDescription"></span></p>
 				</div>
-				<button
-					onclick="fetchArtworks()"
-					type="button"
-				>
-					New Artwork
-				</button>
+				<div class="button-container">
+					<button
+						class="vote-button"
+						type="button"
+					>
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/1633/1633636.png"
+							alt="Thumbs Down Image"
+						/>
+					</button>
+					<button
+						onclick="fetchArtworks()"
+						type="button"
+					>
+						New Artwork
+					</button>
+					<button
+						class="vote-button"
+						type="button"
+					>
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/25/25297.png"
+							alt="Thumbs Up Button"
+						/>
+					</button>
+				</div>
 			</div>
 		</div>
 	</body>
