@@ -48,6 +48,15 @@ async function getArtworkDetails(id) {
 	return data.data;
 }
 
+async function searchForArtwork() {
+	const response =
+		await fetch(
+		// https://api.artic.edu/api/v1/artworks/search?query[term]
+		);
+	const data = await response.json();
+	return data.data;
+}
+
 function displayArtwork(artwork) {
 	const imgElement = document.getElementById("artworkImage");
 	const title = document.getElementById("artworkTitle");
@@ -77,6 +86,7 @@ async function fetchArtworks() {
 	}
 }
 
+// voting selection
 let yesClicks = 0;
 function voteYes() {
 	document.getElementById("yes").innerHTML = yesClicks;
